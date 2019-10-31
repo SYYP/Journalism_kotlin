@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_news"
+        icon="@drawable/news"
+        barColorWhenSelected="#eff4f1"
+        title="新闻时报" />
+    <tab
+        id="@+id/tab_joke"
+        icon="@drawable/joke"
+        title="笑话大全"
+        barColorWhenSelected="#efe748" />
+    <tab
+        id="@+id/tab_today"
+        icon="@drawable/today"
+        title="古往今来"
+        barColorWhenSelected="#99ce2f" />
+    <tab
+        id="@+id/tab_robot"
+        icon="@drawable/robot"
+        title="机器人"
+        barColorWhenSelected="#5df25b" />
+    <tab
+        id="@+id/tab_about"
+        icon="@drawable/about"
+        title="我的"
+        barColorWhenSelected="#60e3ea" />
+</tabs>
