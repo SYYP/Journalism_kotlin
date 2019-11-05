@@ -52,4 +52,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark_Yellow</item>
         <item name="colorAccent">@color/colorAccent_Yellow</item>
     </style>
+    <!-- 关于文本样式 -->
+    <style name="TextAboutEditorItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">@dimen/sw_10dp</item>
+        <item name="android:textSize">@dimen/sw_18sp</item>
+    </style>
 </resources>

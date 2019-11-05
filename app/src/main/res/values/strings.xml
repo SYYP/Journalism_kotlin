@@ -36,4 +36,7 @@
         <item>caijing</item>
         <item>shishang</item>
     </string-array>
+    <string name="string_about_github">github:https://github.com/SYYP</string>
+    <string name="string_about_blog">博客:https://blog.csdn.net/Bu_siliang</string>
+    <string name="about_background"><![CDATA[https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2701408155,2184514200&fm=26&gp=0.jpg]]></string>
 </resources>

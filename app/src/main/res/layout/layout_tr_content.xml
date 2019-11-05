@@ -1,0 +1,73 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    app:behavior_overlapTop="@dimen/sw_40dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_my">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_photo"
+            app:cardCornerRadius="@dimen/sw_40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/sw_80dp"
+            android:layout_height="@dimen/sw_80dp"
+            app:cardElevation="3dp" >
+            <ImageView
+                android:src="@drawable/img_card_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="@dimen/sw_40dp"
+            android:layout_below="@id/card_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sw_220dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="@dimen/sw_30dp"
+            android:layout_marginRight="@dimen/sw_30dp"
+            app:cardElevation="3dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="作者"
+                android:textColor="@color/colorPrimary"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="#433a3a"/>
+
+            <TextView
+                android:id="@+id/tv_about_github"
+                style="@style/TextAboutEditorItemStyle"
+                android:text="@string/string_about_github"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_about_blog"
+                style="@style/TextAboutEditorItemStyle"
+                android:text="@string/string_about_blog"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
