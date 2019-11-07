@@ -19,7 +19,8 @@ import android.widget.ImageView;
 
 /**
  * Created by ypu
- * on 2019/11/6 0006
+ * on 2019/11/6 0006\
+ *
  */
 public class Imageadapters extends BaseAdapter {
     private Context mContext;

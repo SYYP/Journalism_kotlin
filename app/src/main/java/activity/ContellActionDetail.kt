@@ -22,7 +22,7 @@ import java.text.NumberFormat
  * on 2019/11/6 0006
  * 星座页面
  */
-class ContellActionDetail : BaseActivity() {
+class ContellActionDetail: BaseActivity() {
     //设置跳转
     override fun initView() {}
 
@@ -86,6 +86,12 @@ class ContellActionDetail : BaseActivity() {
                         ratingbar.rating = 5.0F
                     }
                 })
+
+    }
+    override fun onBackPressed() {
+        finish()
+        overridePendingTransition(R.anim.anim_out2,R.anim.anim_in2)
+        super.onBackPressed()
 
     }
 }

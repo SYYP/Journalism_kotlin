@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.view.WindowManager
 import android.widget.AdapterView
@@ -14,8 +16,11 @@ import www.app.ypy.com.journalism_kotlin.base.adapter.Imageadapters
 import www.app.ypy.com.journalism_kotlin.base.utils.Contacts
 
 /**
+ *
+ *
  * Created by ypu
  * on 2019/11/6 0006
+ *
  */
 class ConStellActionActivityes : BaseActivity() {
     companion object {
@@ -72,5 +77,21 @@ class ConStellActionActivityes : BaseActivity() {
 
     override fun intiLayout(): Int {
         return R.layout.activity_constellation
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+          if(event!!.keyCode==4  ) {
+              finish()
+              overridePendingTransition(R.anim.anim_in,R.anim.anim_out)
+          }
+
+
+        return super.onKeyDown(keyCode, event)
+    }
+    override fun onBackPressed() {
+        finish()
+        overridePendingTransition(R.anim.anim_in,R.anim.anim_out)
+        super.onBackPressed()
+
     }
 }

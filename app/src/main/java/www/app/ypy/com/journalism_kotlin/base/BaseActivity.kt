@@ -17,7 +17,8 @@ import java.util.*
  * on 2019/10/24 0024
  */
  abstract class BaseActivity : RxAppCompatActivity() , View.OnClickListener {
-        var isSelect: Boolean = true
+
+    var isSelect: Boolean = true
         private var toase: Toast? = null
         private var isshowtitle = true
         private var isshowstate = true

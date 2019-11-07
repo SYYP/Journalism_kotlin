@@ -77,7 +77,8 @@ class ContellFragment : BaseFragment() {
 
                 var intent: Bundle = Bundle();
                 intent.putString(Contacts.CONTELL_NAME, contellist!![position])
-                startActivity(ContellActionDetail().javaClass, intent);
+                startActivity(ContellActionDetail().javaClass, intent)
+                activity!!.overridePendingTransition(R.anim.anim_in,R.anim.anim_out)
             }
 
 
