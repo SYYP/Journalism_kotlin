@@ -29,6 +29,7 @@
     <color name="colorPrimary_Blue">#3249f5</color>
     <color name="colorPrimaryDark_Blue">#011aff</color>
     <color name="colorAccent_Blue">#6e77df</color>
+    <color name="coloBlue">#FF03082E</color>
 
     <color name="colorPrimary_Purple">#cd29df</color>
     <color name="colorPrimaryDark_Purple">#b30fc2</color>
@@ -37,9 +38,11 @@
     <color name="colorPrimary_PP">#8429df</color>
     <color name="colorPrimaryDark_PP">#600fc2</color>
     <color name="colorAccent_PP">#9865ce</color>
+    <color name="color_zi">#3f445f</color>
 
     <!-- 主页上方tab背景 -->
     <color name="mainTabBackground">#eaeaea</color>
+    <color name="color_white">#7d829d</color>
 
     <!-- 新闻详情页上方toolbar的背景 -->
     <color name="showToolBarBackground">#fec4bfbf</color>

@@ -2,6 +2,7 @@ package www.app.ypy.com.journalism_kotlin.base
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
@@ -72,7 +73,21 @@ abstract class BaseFragment : RxFragment() {
     protected fun <T : View> findViewById(id: Int): T {
         return this.getContentView()!!.findViewById(id)
     }
+    /**
+     * 携带数据的页面跳转
+     *
+     * @param clz
+     * @param bundle
+     */
 
+    fun startActivity(clz: Class<*>, bundle: Bundle?) {
+        val intent = Intent()
+        intent.setClass(activity, clz)
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivity(intent)
+    }
     protected abstract fun lazyLoad()
 
     protected fun stopLoad() {}

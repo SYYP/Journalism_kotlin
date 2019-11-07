@@ -18,7 +18,6 @@ class MyFragment : BaseFragment() {
 
     override fun lazyLoad() {
         getContentView()!!.findViewById<Toolbar>(R.id.tl).setOnClickListener {
-
             activity!!.finish()
         }
         getContentView()!!.findViewById<TextView>(R.id.tv_about_github).setOnClickListener {

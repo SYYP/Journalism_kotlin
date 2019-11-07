@@ -158,7 +158,7 @@ import java.util.*
          *  n 无数据跳转
          */
 
-        fun OnIntent(clz: Class<out Activity>) {
+        fun OnIntent(clz: Class<*>) {
             val intent = Intent(this, clz)
             startActivity(intent)
         }

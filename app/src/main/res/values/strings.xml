@@ -7,6 +7,17 @@
     <string name="string_tody">今日</string>
     <string name="string_robot">机器人</string>
     <string name="string_load">重新加载</string>
+    <string name="string_contell_title">星座运势</string>
+    <string name="string_today_fortune">今日运势</string>
+    <string name="string_count">今日的的你有些思考的小漩涡，可能让你忽然的放空，生活中许多的细节让你感触良多，五味杂陈，
+常常有时候就慢动作定格，想法在某处冻结停留，陷入一阵自我对话的沉思之中，这个时候你不喜欢被打扰
+或询问，也不想让某些想法曝光，个性变得有些隐晦</string>
+    <string name="string_gzzs">工作指数:</string>
+    <string name="string_jkzs">健康指数:</string>
+    <string name="string_aqzs">爱情指数:</string>
+    <string name="string_cyzs">财运指数:</string>
+    <string name="string_xysz">幸运数字:</string>
+    <string name="string_spxz">速配星座:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,6 +34,20 @@
         <item>科技</item>
         <item>财经</item>
         <item>时尚</item>
+    </string-array>
+    <string-array name="constell_action">
+        <item>金牛座</item>
+        <item>巨蟹座</item>
+        <item>双子座</item>
+        <item>白羊座</item>
+        <item>狮子座</item>
+        <item>处女座</item>
+        <item>天秤座</item>
+        <item>天蝎座</item>
+        <item>射手座</item>
+        <item>摩羯座</item>
+        <item>水平座</item>
+        <item>双鱼座</item>
     </string-array>
     <string-array name="news_text_id">
         <item>toutiao</item>

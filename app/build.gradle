@@ -68,6 +68,8 @@ dependencies {
     implementation 'com.zhy:base-rvadapter:3.0.3'
     //baseAdapter
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
+
+    implementation 'com.cleveroad:fan-layout-manager:1.0.5'
 }
 repositories {
     mavenCentral()

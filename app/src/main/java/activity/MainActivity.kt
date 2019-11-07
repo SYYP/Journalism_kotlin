@@ -16,10 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
-import www.app.ypy.com.journalism_kotlin.base.fragment.JokeFragment
-import www.app.ypy.com.journalism_kotlin.base.fragment.MyFragment
-import www.app.ypy.com.journalism_kotlin.base.fragment.NewsFragment
-import www.app.ypy.com.journalism_kotlin.base.fragment.TodayFragment
+import www.app.ypy.com.journalism_kotlin.base.fragment.*
 import www.app.ypy.com.journalism_kotlin.base.utils.ActivityUtils
 
 
@@ -34,6 +31,7 @@ class MainActivity : BaseActivity() {
     private var myFragment: MyFragment? = null //我的模块
     private var currentFragment: Fragment? = null
     private var activityUtils: ActivityUtils? = null
+    private var contellFragment: ContellFragment? = null
     var imageView: ImageView? = null
     var bottomBar: BottomBar? = null
     override fun initView() {
@@ -94,6 +92,12 @@ class MainActivity : BaseActivity() {
                     closeLayout()
                 }
                 R.id.tab_robot->{
+                    if (contellFragment == null) {
+                        contellFragment = ContellFragment()
+                    }
+                    addFragment(contellFragment!!)
+                    nv_left.setCheckedItem(R.id.tab_robot)
+                    closeLayout()
                 }
                 R.id.tab_about->{
                     if(myFragment==null){

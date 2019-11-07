@@ -9,20 +9,20 @@
         id="@+id/tab_joke"
         icon="@drawable/joke"
         title="笑话大全"
-        barColorWhenSelected="#efe748" />
+        barColorWhenSelected="#eff4f1" />
     <tab
         id="@+id/tab_today"
         icon="@drawable/today"
         title="古往今来"
-        barColorWhenSelected="#99ce2f" />
+        barColorWhenSelected="#eff4f1" />
     <tab
         id="@+id/tab_robot"
         icon="@drawable/robot"
-        title="机器人"
-        barColorWhenSelected="#5df25b" />
+        title="今日运势"
+        barColorWhenSelected="#eff4f1" />
     <tab
         id="@+id/tab_about"
         icon="@drawable/about"
         title="我的"
-        barColorWhenSelected="#60e3ea" />
+        barColorWhenSelected="#eff4f1" />
 </tabs>

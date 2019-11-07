@@ -61,4 +61,8 @@ public class Constants {
     public static final String BASE_JUHE_URL = "http://v.juhe.cn/";
 
     public static final String BASE_Q_A_ROBOT_URL = "http://op.juhe.cn/robot/";
+    /**
+     *  星座运势接口
+     */
+      public static final String  BASE_CONTELL_URL="http://web.juhe.cn:8080/";
 }

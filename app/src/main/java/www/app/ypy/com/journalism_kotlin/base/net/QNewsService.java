@@ -5,6 +5,7 @@ import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import www.app.ypy.com.journalism_kotlin.base.bean.ConstellBean;
 import www.app.ypy.com.journalism_kotlin.base.bean.JokeBean;
 import www.app.ypy.com.journalism_kotlin.base.bean.NewsDataBean;
 
@@ -15,9 +16,9 @@ public interface QNewsService {
 
 
     /**
-     * @param page      查询的页数
-     * @param pagesize  一页数据显示的条数
-     * @return          查询结束返回的被观察者
+     * @param page     查询的页数
+     * @param pagesize 一页数据显示的条数
+     * @return 查询结束返回的被观察者
      */
     // http://japi.juhe.cn/joke/content/text.from?key=ae240f7fba620fc370b803566654949e
     @POST("text.from?key=ae240f7fba620fc370b803566654949e")
@@ -28,12 +29,12 @@ public interface QNewsService {
 
 
     /**
-     * @param time          要指定查询的时间
-     * @param page          查询的页数
-     * @param pagesize      一页数据显示的条数
-     * @param sort          判断是在指定时间之前还是之后
-     *                          {@value DESC 指定之前},{@value ASC 指定之后}
-     * @return              查询结束返回的被观察者
+     * @param time     要指定查询的时间
+     * @param page     查询的页数
+     * @param pagesize 一页数据显示的条数
+     * @param sort     判断是在指定时间之前还是之后
+     *                 {@value DESC 指定之前},{@value ASC 指定之后}
+     * @return 查询结束返回的被观察者
      */
     // http://japi.juhe.cn/joke/content/list.from?key=ae240f7fba620fc370b803566654949e&page=1&pagesize=5&sort=desc
     @GET("list.from?key=ae240f7fba620fc370b803566654949e")
@@ -84,8 +85,8 @@ public interface QNewsService {
     /**
      * 根据 新闻类型 获取新闻数据
      *
-     * @param type  新闻的类型
-     * @return      查询结束 返回 数据的 被观察者
+     * @param type 新闻的类型
+     * @return 查询结束 返回 数据的 被观察者
      */
     // http://v.juhe.cn/toutiao/index?key=d78b502268f7456b79fbe7228cecdd46
     @GET("toutiao/index?key=d78b502268f7456b79fbe7228cecdd46")
@@ -93,6 +94,17 @@ public interface QNewsService {
             @Query("type") String type
     );
 
+    /**
+     *  得到星座的相关信息
+     * @param consname
+     * @param type
+     * @return
+     */
+    @GET("constellation/getAll?key=da31e751bd7a42a5004f2079916ccaf2")
+    Observable<ConstellBean> getNewConstellData(
+            @Query("consName") String consname,
+            @Query("type") String type
+            );
 //    /**
 //     * @return 返回随机的动态图的 被观察者
 //     */
