@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/text_count"
-            android:layout_marginTop="@dimen/sw_30dp"
+            android:layout_marginTop="@dimen/sw_20dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -241,7 +241,7 @@
         </LinearLayout>
         <TextView
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/sw_40dp"
+            android:layout_marginBottom="@dimen/sw_20dp"
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:textSize="@dimen/sw_20sp"
