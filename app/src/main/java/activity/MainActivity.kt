@@ -45,6 +45,7 @@ class MainActivity : BaseActivity() {
         }
         activityUtils = ActivityUtils(this)
         //设置侧滑菜单的头像
+
         imageView = nv_left!!.getHeaderView(0).findViewById(R.id.icon_image)
         val ivBmp = nv_left!!.getHeaderView(0).findViewById(R.id.iv_head_bg) as ImageView
         Glide.with(this)

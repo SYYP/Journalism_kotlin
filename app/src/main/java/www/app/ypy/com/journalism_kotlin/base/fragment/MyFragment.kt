@@ -1,7 +1,9 @@
 package www.app.ypy.com.journalism_kotlin.base.fragment
 
 import android.support.v7.widget.Toolbar
+import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseFragment
 import www.app.ypy.com.journalism_kotlin.base.activity.WebViewActivity
@@ -36,6 +38,12 @@ class MyFragment : BaseFragment() {
             }
 
         }
+     var imageView:ImageView =getContentView()!!.findViewById<ImageView>(R.id.img_back_ground)
+        Glide.with(activity)
+                .load("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573191694046&di=0836bac395c0b99c15be31c570cd092d&imgtype=0&src=http%3A%2F%2Fimg1.maka.im%2Fuser%2F2899768%2Fimages%2Fd5b9469e5a984b3c9f1911087184b8df.gif")
+                .asGif()
+                .centerCrop()
+                .into(imageView!!)
 
 
     }

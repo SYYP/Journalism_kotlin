@@ -6,6 +6,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 import www.app.ypy.com.journalism_kotlin.base.bean.ConstellBean;
+import www.app.ypy.com.journalism_kotlin.base.bean.HistoryTodayBean;
 import www.app.ypy.com.journalism_kotlin.base.bean.JokeBean;
 import www.app.ypy.com.journalism_kotlin.base.bean.NewsDataBean;
 
@@ -58,17 +59,17 @@ public interface QNewsService {
 //            @Query("e_id") String e_id
 //    );
 //
-//    /**
-//     * 根据 日期 获取历史上的今天 数据
-//     *
-//     * @param date  当前日期
-//     * @return      查询结束 返回 历史上今天 数据 的被观察者
-//     */
-//    // http://v.juhe.cn/todayOnhistory/queryEvent.php?key=f5f7d655ef148f6bb777c80167f7f6de
-//    @GET("todayOnhistory/queryEvent.php?key=f5f7d655ef148f6bb777c80167f7f6de")
-//    Observable<TodayOfHistoryBean> getTodayOfHistoryData(
-//            @Query("date") String date
-//    );
+    /**
+     * 根据 日期 获取历史上的今天 数据
+     *
+     * @param date  当前日期
+     * @return      查询结束 返回 历史上今天 数据 的被观察者
+     */
+    // http://v.juhe.cn/todayOnhistory/queryEvent.php?key=f5f7d655ef148f6bb777c80167f7f6de
+    @GET("todayOnhistory/queryEvent.php?key=f5f7d655ef148f6bb777c80167f7f6de")
+    Observable<HistoryTodayBean> getTodayOfHistoryData(
+            @Query("date") String date
+    );
 //
 //    /**
 //     * 根据发送 消息内容， 回复

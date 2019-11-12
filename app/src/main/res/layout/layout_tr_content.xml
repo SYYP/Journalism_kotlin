@@ -4,31 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
-    app:behavior_overlapTop="@dimen/sw_40dp"
+    app:behavior_overlapTop="@dimen/sw_20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/fragment_my">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_photo"
-            app:cardCornerRadius="@dimen/sw_40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="@dimen/sw_80dp"
-            android:layout_height="@dimen/sw_80dp"
-            app:cardElevation="3dp" >
-            <ImageView
-                android:src="@drawable/img_card_photo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </android.support.v7.widget.CardView>
+          <ImageView
+              android:background="@drawable/img_back"
+               android:id="@+id/img_back_ground"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
 
         <android.support.v7.widget.CardView
             android:layout_marginTop="@dimen/sw_40dp"
-            android:layout_below="@id/card_photo"
+
             android:layout_width="match_parent"
             android:layout_height="@dimen/sw_220dp"
             android:layout_marginBottom="40dp"
