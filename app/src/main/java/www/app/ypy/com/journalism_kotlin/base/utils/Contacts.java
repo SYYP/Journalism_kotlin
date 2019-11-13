@@ -7,4 +7,5 @@ package www.app.ypy.com.journalism_kotlin.base.utils;
 public class Contacts {
 
     public static final String CONTELL_NAME="name";
+    public static final String ED_ID="ed_id";
 }

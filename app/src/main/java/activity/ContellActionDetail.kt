@@ -25,7 +25,6 @@ import java.text.NumberFormat
 class ContellActionDetail: BaseActivity() {
     //设置跳转
     override fun initView() {}
-
     override fun initData() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //透明状态栏
@@ -33,22 +32,16 @@ class ContellActionDetail: BaseActivity() {
 //            //透明导航栏
            // window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
         }
-
         //得到数据
         var bundle: Bundle = intent.extras
         var contellName: String = bundle.get(Contacts.CONTELL_NAME) as String
 
-
         //网络请求数据
         getNetWorkData(contellName!!)
     }
-
-    override fun widgetClick(v: View?) {}
-
     override fun intiLayout(): Int {
         return R.layout.activity_contellaction_detail
     }
-
     private fun getNetWorkData(name: String) {
         QClitent.getInstance()
                 .create(QNewsService::class.java, Constants.BASE_CONTELL_URL)

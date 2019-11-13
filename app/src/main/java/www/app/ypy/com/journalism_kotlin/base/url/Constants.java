@@ -48,8 +48,6 @@ public class Constants {
 
     public static final String DOWNLOAD_URL
             = "https://github.com/xiaweizi/QNews/raw/master/QNews.apk";
-
-
     /**
      * 段子 baseUrl
      */

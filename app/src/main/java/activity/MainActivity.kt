@@ -114,9 +114,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    override fun widgetClick(v: View?) {
-    }
-
     override fun intiLayout(): Int {
         return R.layout.activity_main
     }

@@ -29,7 +29,6 @@ class WebViewActivity :BaseActivity() {
         initWebViewClient()
         initWebChromeClient()
     }
-    override fun widgetClick(v: View?) {}
     override fun intiLayout(): Int {
       return R.layout.activity_webview
     }

@@ -16,7 +16,7 @@ import java.util.*
  * Created by ypu
  * on 2019/10/24 0024
  */
- abstract class BaseActivity : RxAppCompatActivity() , View.OnClickListener {
+ abstract class BaseActivity : RxAppCompatActivity(){
 
     var isSelect: Boolean = true
         private var toase: Toast? = null
@@ -27,7 +27,7 @@ import java.util.*
         private var isSetStatusBar = true
         protected abstract fun initView()//初始化数据
         protected abstract fun initData()//加载数据
-        protected abstract fun widgetClick(v: View?)
+
         /**
          * 设置布局
          *
@@ -128,15 +128,6 @@ import java.util.*
             }
             lastClick = System.currentTimeMillis()
             return true
-        }
-
-        /**
-         *  点击事件
-         */
-        override fun onClick(v: View?) {
-            if (fastClick()) {
-                widgetClick(v)
-            }
         }
 
         /**

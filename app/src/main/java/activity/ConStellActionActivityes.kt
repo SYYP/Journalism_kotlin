@@ -72,7 +72,6 @@ class ConStellActionActivityes : BaseActivity() {
     }
 
 
-    override fun widgetClick(v: View?) {}
 
 
     override fun intiLayout(): Int {

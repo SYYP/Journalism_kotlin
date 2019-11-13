@@ -11,6 +11,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import www.app.ypy.com.journalism_kotlin.R;
 import www.app.ypy.com.journalism_kotlin.base.activity.TodayDetailActivity;
 import www.app.ypy.com.journalism_kotlin.base.bean.HistoryTodayBean;
+import www.app.ypy.com.journalism_kotlin.base.utils.Contacts;
 
 /**
  * Created by ypu
@@ -32,9 +33,9 @@ public class HistoryTodayAdapter extends BaseQuickAdapter<HistoryTodayBean.Resul
         helper.setOnClickListener(R.id.ll_today_detail, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mContext, TodayDetailActivity.class);
-//                intent.putExtra("e_id", item.getE_id());
-//                mContext.startActivity(intent);
+                Intent intent = new Intent(mContext, TodayDetailActivity.class);
+                intent.putExtra(Contacts.ED_ID, item.getE_id());
+                mContext.startActivity(intent);
             }
         });
     }
