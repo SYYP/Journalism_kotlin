@@ -6,9 +6,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.view.ViewPager
-import android.view.animation.LinearInterpolator
-import android.widget.ImageView
-import com.trello.rxlifecycle.components.support.RxFragment
 import kotlinx.android.synthetic.main.fragment_news.*
 import net.lucode.hackware.magicindicator.MagicIndicator
 import net.lucode.hackware.magicindicator.ViewPagerHelper
@@ -18,7 +15,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerInd
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ColorTransitionPagerTitleView
-import org.intellij.lang.annotations.MagicConstant
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseFragment
 

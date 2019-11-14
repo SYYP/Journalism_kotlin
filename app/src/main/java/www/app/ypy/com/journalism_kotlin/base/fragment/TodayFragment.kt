@@ -8,7 +8,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseFragment

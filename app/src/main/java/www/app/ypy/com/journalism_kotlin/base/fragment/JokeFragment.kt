@@ -3,7 +3,6 @@ package www.app.ypy.com.journalism_kotlin.base.fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.widget.AdapterView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -23,7 +22,7 @@ import www.app.ypy.com.journalism_kotlin.base.net.QClitent
 import www.app.ypy.com.journalism_kotlin.base.net.QNewsService
 import www.app.ypy.com.journalism_kotlin.base.url.Constants
 import www.app.ypy.com.journalism_kotlin.base.utils.Shareutil
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by ypu

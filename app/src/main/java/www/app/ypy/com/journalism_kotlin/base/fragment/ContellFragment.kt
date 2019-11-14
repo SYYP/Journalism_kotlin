@@ -1,38 +1,17 @@
 package www.app.ypy.com.journalism_kotlin.base.fragment
-
 import activity.ContellActionDetail
 import android.os.Build
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.WindowManager
 import android.widget.AdapterView
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.listener.OnItemLongClickListener
-import com.scwang.smartrefresh.layout.SmartRefreshLayout
-import com.scwang.smartrefresh.layout.footer.FalsifyFooter
-import com.scwang.smartrefresh.layout.header.FalsifyHeader
-import com.scwang.smartrefresh.layout.listener.OnRefreshListener
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_constellation.*
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseFragment
 import www.app.ypy.com.journalism_kotlin.base.adapter.Imageadapter
-import www.app.ypy.com.journalism_kotlin.base.adapter.Imageadapters
-import www.app.ypy.com.journalism_kotlin.base.adapter.JokeAdapter
-import www.app.ypy.com.journalism_kotlin.base.bean.JokeBean
-import www.app.ypy.com.journalism_kotlin.base.net.QClitent
-import www.app.ypy.com.journalism_kotlin.base.net.QNewsService
-import www.app.ypy.com.journalism_kotlin.base.url.Constants
 import www.app.ypy.com.journalism_kotlin.base.utils.Contacts
-import www.app.ypy.com.journalism_kotlin.base.utils.Shareutil
 import www.app.ypy.com.journalism_kotlin.base.view.GalleryFlows
-import java.util.ArrayList
+
 
 /**
  * Created by ypu

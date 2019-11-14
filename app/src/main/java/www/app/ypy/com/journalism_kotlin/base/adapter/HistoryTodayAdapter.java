@@ -3,7 +3,6 @@ package www.app.ypy.com.journalism_kotlin.base.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
-import android.widget.AdapterView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;

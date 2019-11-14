@@ -2,11 +2,9 @@ package activity
 
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_constellation.*
 import kotlinx.android.synthetic.main.activity_contellaction_detail.*
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
@@ -15,7 +13,6 @@ import www.app.ypy.com.journalism_kotlin.base.net.QClitent
 import www.app.ypy.com.journalism_kotlin.base.net.QNewsService
 import www.app.ypy.com.journalism_kotlin.base.url.Constants
 import www.app.ypy.com.journalism_kotlin.base.utils.Contacts
-import java.text.NumberFormat
 
 /**
  * Created by ypu

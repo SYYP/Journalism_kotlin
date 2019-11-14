@@ -6,8 +6,6 @@ import android.view.View
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.SimpleClickListener
 import com.scwang.smartrefresh.header.MaterialHeader
-import com.scwang.smartrefresh.layout.SmartRefreshLayout
-import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle
 import com.scwang.smartrefresh.layout.footer.BallPulseFooter
 import com.scwang.smartrefresh.layout.header.BezierRadarHeader
@@ -21,7 +19,6 @@ import www.app.ypy.com.journalism_kotlin.base.BaseFragment
 import www.app.ypy.com.journalism_kotlin.base.activity.WebViewActivity
 import www.app.ypy.com.journalism_kotlin.base.adapter.NewsDataAdapter
 import www.app.ypy.com.journalism_kotlin.base.bean.NewsDataBean
-
 import www.app.ypy.com.journalism_kotlin.base.net.QClitent
 import www.app.ypy.com.journalism_kotlin.base.net.QNewsService
 import www.app.ypy.com.journalism_kotlin.base.url.Constants

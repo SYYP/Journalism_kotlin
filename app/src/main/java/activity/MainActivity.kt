@@ -1,29 +1,20 @@
 package activity
 
+
 import android.app.AlertDialog
 import android.os.Build
-import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.view.Gravity
-import android.view.MenuItem
-
-import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import com.blankj.utilcode.utils.FileUtils
-
-
-import com.blankj.utilcode.utils.SPUtils
 import com.bumptech.glide.Glide
 import com.roughike.bottombar.BottomBar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
 import www.app.ypy.com.journalism_kotlin.base.fragment.*
 import www.app.ypy.com.journalism_kotlin.base.utils.ActivityUtils
-import java.util.*
-import java.util.ResourceBundle.clearCache
 
 
 /**
