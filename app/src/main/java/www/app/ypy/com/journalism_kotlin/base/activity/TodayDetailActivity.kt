@@ -1,6 +1,11 @@
 package www.app.ypy.com.journalism_kotlin.base.activity
 
+import android.os.Build
+import android.transition.Explode
+import android.transition.Fade
+import android.transition.Slide
 import android.view.View
+import android.view.Window
 import com.blankj.utilcode.utils.ToastUtils
 import com.bumptech.glide.Glide
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -28,9 +33,21 @@ class TodayDetailActivity : BaseActivity() {
         img_back.setOnClickListener {
             finish()
         }
+
     }
 
     override fun intiLayout(): Int {
+
+        // Activity 专场动画
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.enterTransition = when (Math.random() * 3) {
+                in 0.0..1.0 -> Explode()
+                in 1.0..2.0 -> Slide()
+                in 2.0..3.0 -> Fade()
+                else -> Slide()
+            }
+        }
         return R.layout.activity_todaydetail
 
     }

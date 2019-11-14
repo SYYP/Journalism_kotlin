@@ -16,9 +16,9 @@
                     android:icon="@drawable/today"
                     android:title="历史上的今天" />
                 <item
-                    android:id="@+id/nav_robot"
+                    android:id="@+id/item_cleaner"
                     android:icon="@drawable/robot"
-                    android:title="图灵机器人" />
+                    android:title="清除缓存" />
                 <item
                     android:id="@+id/nav_other"
                     android:icon="@drawable/about"

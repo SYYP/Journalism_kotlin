@@ -10,15 +10,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import www.app.ypy.com.journalism_kotlin.R;
 import www.app.ypy.com.journalism_kotlin.base.bean.NewsDataBean;
 
-/**
- * 工程名：  QNews
- * 包名：    com.xiaweizi.qnews.adapter
- * 类名：    NewsDataAdapters
- * 创建者：  夏韦子
- * 创建日期： 2017/2/10
- * 创建时间： 15:23
- */
-
 public class NewsDataAdapter extends BaseQuickAdapter<NewsDataBean.ResultBean.DataBean, BaseViewHolder> {
 
     public NewsDataAdapter() {

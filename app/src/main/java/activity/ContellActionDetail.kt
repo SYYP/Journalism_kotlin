@@ -22,15 +22,16 @@ import java.text.NumberFormat
  * on 2019/11/6 0006
  * 星座页面
  */
-class ContellActionDetail: BaseActivity() {
+class ContellActionDetail : BaseActivity() {
     //设置跳转
     override fun initView() {}
+
     override fun initData() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //透明状态栏
-       window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 //            //透明导航栏
-           // window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+            // window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
         }
         //得到数据
         var bundle: Bundle = intent.extras
@@ -39,9 +40,11 @@ class ContellActionDetail: BaseActivity() {
         //网络请求数据
         getNetWorkData(contellName!!)
     }
+
     override fun intiLayout(): Int {
         return R.layout.activity_contellaction_detail
     }
+
     private fun getNetWorkData(name: String) {
         QClitent.getInstance()
                 .create(QNewsService::class.java, Constants.BASE_CONTELL_URL)
@@ -55,7 +58,7 @@ class ContellActionDetail: BaseActivity() {
                     text_aqzs.text = constellation!!.love + "%"//爱情指数
                     text_cyzs.text = constellation!!.money + "%"//财运指数
                     text_xysz.text = constellation!!.number//幸运数字
-                    text_spxz.text=constellation!!.qFriend//速配星座
+                    text_spxz.text = constellation!!.qFriend//速配星座
                     text_date.text = constellation!!.datetime//日期
                     var number: Double = constellation!!.all
                     val double: Double = number / 20.00
@@ -81,9 +84,10 @@ class ContellActionDetail: BaseActivity() {
                 })
 
     }
+
     override fun onBackPressed() {
         finish()
-        overridePendingTransition(R.anim.anim_out2,R.anim.anim_in2)
+        overridePendingTransition(R.anim.anim_out2, R.anim.anim_in2)
         super.onBackPressed()
 
     }

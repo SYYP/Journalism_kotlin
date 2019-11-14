@@ -1,12 +1,16 @@
 package activity
 
+import android.app.AlertDialog
 import android.os.Build
+import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.view.Gravity
+import android.view.MenuItem
 
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
+import com.blankj.utilcode.utils.FileUtils
 
 
 import com.blankj.utilcode.utils.SPUtils
@@ -18,6 +22,8 @@ import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
 import www.app.ypy.com.journalism_kotlin.base.fragment.*
 import www.app.ypy.com.journalism_kotlin.base.utils.ActivityUtils
+import java.util.*
+import java.util.ResourceBundle.clearCache
 
 
 /**
@@ -34,6 +40,7 @@ class MainActivity : BaseActivity() {
     private var contellFragment: ContellFragment? = null
     var imageView: ImageView? = null
     var bottomBar: BottomBar? = null
+    private var mDirSize = ""
     override fun initView() {
         //设置主题
 //        val utils = SPUtils("theme_id")
@@ -61,6 +68,54 @@ class MainActivity : BaseActivity() {
                 .asGif()
                 .centerCrop()
                 .into(ivBmp!!)
+
+        /**
+         *   左侧栏的监听
+         *
+         */
+        nv_left!!.setNavigationItemSelectedListener { item ->
+            nv_left!!.setCheckedItem(item.itemId)
+            when (item.itemId) {
+                R.id.item_cleaner -> clearCache()
+                else -> {
+
+                }
+            }
+            false
+
+        }
+        /**
+         *  两种方式
+         */
+//        nv_left!!.setNavigationItemSelectedListener {
+//            object : NavigationView.OnNavigationItemSelectedListener {
+//                override fun onNavigationItemSelected(p0: MenuItem): Boolean {
+//                when(p0.itemId){
+//                    R.id.nav_duanzi->closeLayout()
+//                }
+//                    return false
+//                }
+//
+//            }
+//          false
+//        }
+    }
+
+    private fun clearCache() {
+        mDirSize = FileUtils.getDirSize(cacheDir)
+        AlertDialog.Builder(this@MainActivity).setTitle(R.string.string_clearcache)
+                .setMessage("缓存大小:" + mDirSize)
+                .setPositiveButton("确定") { dialog, which ->
+                    var boolean: Boolean = FileUtils.deleteDir(
+                            cacheDir)
+                    if (boolean) {
+                        toastShort("删除成功")
+                        closeLayout()
+                    }
+                }
+                .setNegativeButton("取消", null)
+                .show()
+
     }
 
     override fun initData() {
@@ -92,7 +147,7 @@ class MainActivity : BaseActivity() {
                     nv_left.setCheckedItem(R.id.tab_today)
                     closeLayout()
                 }
-                R.id.tab_robot->{
+                R.id.tab_robot -> {
                     if (contellFragment == null) {
                         contellFragment = ContellFragment()
                     }
@@ -100,9 +155,9 @@ class MainActivity : BaseActivity() {
                     nv_left.setCheckedItem(R.id.tab_robot)
                     closeLayout()
                 }
-                R.id.tab_about->{
-                    if(myFragment==null){
-                        myFragment= MyFragment()
+                R.id.tab_about -> {
+                    if (myFragment == null) {
+                        myFragment = MyFragment()
                     }
                     addFragment(myFragment!!)
                     nv_left.setCheckedItem(R.id.tab_robot)
