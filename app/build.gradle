@@ -7,7 +7,7 @@ android {
         myConfig {
             keyAlias 'key0'
             keyPassword '123456'
-            storeFile file('E:/Journalism_kotlin/app/marks.jks')
+            storeFile file("marks.jks")
             storePassword '123456'
         }
     }
