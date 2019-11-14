@@ -4,9 +4,9 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_news"
+                    android:id="@+id/item_theme"
                     android:icon="@drawable/news"
-                    android:title="新闻" />
+                    android:title="切换主题" />
                 <item
                     android:id="@+id/nav_duanzi"
                     android:icon="@drawable/joke"

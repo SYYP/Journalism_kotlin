@@ -5,9 +5,11 @@ import android.app.AlertDialog
 import android.os.Build
 import android.support.v4.app.Fragment
 import android.view.Gravity
+import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import com.blankj.utilcode.utils.FileUtils
+import com.blankj.utilcode.utils.SPUtils
 import com.bumptech.glide.Glide
 import com.roughike.bottombar.BottomBar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,11 +34,12 @@ class MainActivity : BaseActivity() {
     var imageView: ImageView? = null
     var bottomBar: BottomBar? = null
     private var mDirSize = ""
+    var build: AlertDialog.Builder? = null
     override fun initView() {
         //设置主题
-//        val utils = SPUtils("theme_id")
-//        val theme_id = utils.getInt("theme_id", R.style.AppTheme)
-//        setTheme(theme_id)
+        val utils = SPUtils("theme_id")
+        val theme_id = utils.getInt("theme_id", R.style.AppTheme)
+        setTheme(theme_id)
         //设置透明状态
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -51,7 +54,7 @@ class MainActivity : BaseActivity() {
                 .asGif()
                 .centerCrop()
                 .into(imageView!!)
-        /**
+        /**uotian
          *  加载背景图
          */
         Glide.with(this)
@@ -68,6 +71,7 @@ class MainActivity : BaseActivity() {
             nv_left!!.setCheckedItem(item.itemId)
             when (item.itemId) {
                 R.id.item_cleaner -> clearCache()
+                R.id.item_theme -> changeTheme()
                 else -> {
 
                 }
@@ -90,6 +94,45 @@ class MainActivity : BaseActivity() {
 //            }
 //          false
 //        }
+    }
+
+    private fun changeTheme() {
+        val view = View.inflate(this@MainActivity, R.layout.item_change_theme, null)
+        build = AlertDialog.Builder(this).setView(view)
+        build!!.show()
+        view.findViewById<ImageView>(R.id.tv_red).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_green).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_blue).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_orange).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_pink).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_sky).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_purple).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_pp).setOnClickListener(listener)
+        view.findViewById<ImageView>(R.id.tv_yellow).setOnClickListener(listener)
+    }
+
+    private val listener = View.OnClickListener { v ->
+        when (v.id) {
+           R.id.tv_red->choiceTheme(0)
+            R.id.tv_blue -> choiceTheme(1)
+            R.id.tv_green -> choiceTheme(2)
+            R.id.tv_orange -> choiceTheme(3)
+            R.id.tv_pink -> choiceTheme(4)
+            R.id.tv_sky -> choiceTheme(5)
+            R.id.tv_purple -> choiceTheme(6)
+            R.id.tv_pp -> choiceTheme(7)
+            R.id.tv_yellow -> choiceTheme(8)
+        }
+    }
+    private fun choiceTheme(index: Int) {
+        val themes = intArrayOf(R.style.AppTheme, R.style.AppTheme_Blue, R.style.AppTheme_Green, R.style.AppTheme_Orange, R.style.AppTheme_Pink, R.style.AppTheme_Sky, R.style.AppTheme_Purple, R.style.AppTheme_PP, R.style.AppTheme_Yellow)
+        val utils = SPUtils("theme_id")
+        utils.putInt("theme_id", themes[index])
+        val intent = intent
+        overridePendingTransition(0, 0)
+        finish()
+        overridePendingTransition(0, 0)
+        startActivity(intent)
     }
 
     private fun clearCache() {
