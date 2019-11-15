@@ -1,6 +1,4 @@
 package activity
-
-
 import android.app.AlertDialog
 import android.os.Build
 import android.support.v4.app.Fragment
@@ -17,8 +15,6 @@ import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
 import www.app.ypy.com.journalism_kotlin.base.fragment.*
 import www.app.ypy.com.journalism_kotlin.base.utils.ActivityUtils
-
-
 /**
  * Created by ypu
  * on 2019/10/25 0025
@@ -95,7 +91,6 @@ class MainActivity : BaseActivity() {
 //          false
 //        }
     }
-
     private fun changeTheme() {
         val view = View.inflate(this@MainActivity, R.layout.item_change_theme, null)
         build = AlertDialog.Builder(this).setView(view)
@@ -113,7 +108,7 @@ class MainActivity : BaseActivity() {
 
     private val listener = View.OnClickListener { v ->
         when (v.id) {
-           R.id.tv_red->choiceTheme(0)
+            R.id.tv_red -> choiceTheme(0)
             R.id.tv_blue -> choiceTheme(1)
             R.id.tv_green -> choiceTheme(2)
             R.id.tv_orange -> choiceTheme(3)
@@ -124,6 +119,7 @@ class MainActivity : BaseActivity() {
             R.id.tv_yellow -> choiceTheme(8)
         }
     }
+
     private fun choiceTheme(index: Int) {
         val themes = intArrayOf(R.style.AppTheme, R.style.AppTheme_Blue, R.style.AppTheme_Green, R.style.AppTheme_Orange, R.style.AppTheme_Pink, R.style.AppTheme_Sky, R.style.AppTheme_Purple, R.style.AppTheme_PP, R.style.AppTheme_Yellow)
         val utils = SPUtils("theme_id")
