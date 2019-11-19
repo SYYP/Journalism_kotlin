@@ -8,9 +8,9 @@
                     android:icon="@drawable/news"
                     android:title="切换主题" />
                 <item
-                    android:id="@+id/nav_duanzi"
+                    android:id="@+id/nav_dark_night"
                     android:icon="@drawable/joke"
-                    android:title="段子" />
+                    android:title="日夜切换" />
                 <item
                     android:id="@+id/nav_today_of_history"
                     android:icon="@drawable/today"

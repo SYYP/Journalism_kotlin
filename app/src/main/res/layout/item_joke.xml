@@ -14,16 +14,15 @@
         android:padding="@dimen/sw_15dp">
 
         <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:id="@+id/tv_joke_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/textNormalColor"
-            android:textSize="@dimen/sw_15sp" />
-
+            style="?attr/contentStyle" />
         <TextView
-            android:id="@+id/tv_joke_date"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_joke_date"
+            style="?attr/contentStyle"
             android:layout_gravity="right"
             android:layout_marginTop="@dimen/sw_10dp"
             android:text="" />

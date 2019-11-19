@@ -35,20 +35,17 @@ class NewDetailFragment : BaseFragment {
     constructor(type: String) {
         this.type = type
     }
-
     override fun setContentView(): Int {
         return R.layout.fragment_newdetail
     }
-
     override fun lazyLoad() {
-        updateData()
         //设置适配器
         newsdapteradapter = NewsDataAdapter()
         newsdapteradapter!!.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT)
         getContentView()!!.refresh_layout.setRefreshHeader(MaterialHeader(activity).setShowBezierWave(true));
         //设置 Footer 为 球脉冲
         getContentView()!!.refresh_layout.setRefreshFooter(BallPulseFooter(activity).setSpinnerStyle(SpinnerStyle.FixedBehind));
-
+        updateData()
         /*
          *
          */
@@ -91,7 +88,6 @@ class NewDetailFragment : BaseFragment {
         })
 
     }
-
     fun updateData() {
         QClitent.getInstance()
                 .create(QNewsService::class.java, Constants.BASE_JUHE_URL)

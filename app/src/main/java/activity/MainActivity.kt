@@ -1,4 +1,5 @@
 package activity
+
 import android.app.AlertDialog
 import android.os.Build
 import android.support.v4.app.Fragment
@@ -15,6 +16,8 @@ import www.app.ypy.com.journalism_kotlin.R
 import www.app.ypy.com.journalism_kotlin.base.BaseActivity
 import www.app.ypy.com.journalism_kotlin.base.fragment.*
 import www.app.ypy.com.journalism_kotlin.base.utils.ActivityUtils
+import www.app.ypy.com.journalism_kotlin.base.utils.ThemeChangeUtil
+
 /**
  * Created by ypu
  * on 2019/10/25 0025
@@ -68,6 +71,7 @@ class MainActivity : BaseActivity() {
             when (item.itemId) {
                 R.id.item_cleaner -> clearCache()
                 R.id.item_theme -> changeTheme()
+                R.id.nav_dark_night -> setDarkOrNightTheme()
                 else -> {
 
                 }
@@ -90,6 +94,16 @@ class MainActivity : BaseActivity() {
 //            }
 //          false
 //        }
+    }
+
+    private fun setDarkOrNightTheme() {
+        if (ThemeChangeUtil.isChange) {
+            ThemeChangeUtil.isChange = false
+        } else {
+            ThemeChangeUtil.isChange = true
+        }
+        ThemeChangeUtil.changeTheme(this)
+        recreate()
     }
     private fun changeTheme() {
         val view = View.inflate(this@MainActivity, R.layout.item_change_theme, null)

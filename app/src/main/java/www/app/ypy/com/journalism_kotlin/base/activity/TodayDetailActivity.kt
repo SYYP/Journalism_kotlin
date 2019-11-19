@@ -4,7 +4,6 @@ import android.os.Build
 import android.transition.Explode
 import android.transition.Fade
 import android.transition.Slide
-import android.view.View
 import android.view.Window
 import com.blankj.utilcode.utils.ToastUtils
 import com.bumptech.glide.Glide

@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
+
     <style name="AppTheme_Blue" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary_Blue</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark_Blue</item>
@@ -24,6 +25,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark_Orange</item>
         <item name="colorAccent">@color/colorAccent_Orange</item>
     </style>
+
     <style name="AppTheme_Pink" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary_Pink</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark_Pink</item>
@@ -47,6 +49,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark_PP</item>
         <item name="colorAccent">@color/colorAccent_PP</item>
     </style>
+
     <style name="AppTheme_Yellow" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary_Yellow</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark_Yellow</item>
@@ -62,6 +65,47 @@
         <item name="android:padding">@dimen/sw_10dp</item>
         <item name="android:textSize">@dimen/sw_18sp</item>
     </style>
+    <!--设置白天主题-->
+    <style name="DayTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:windowBackground">@color/background_material_light</item>
+        <item name="colorAccent">#00BCD4</item>
+        <item name="colorControlNormal">#00BCD4</item>
+        <item name="tiltestyle">@style/NightTitleStyle</item>
+        <item name="contentStyle">@style/NightTextContentStyle</item>
+        <item name="android:textColor">#000000</item>
 
+    </style>
 
+    <!--夜间主题-->
+
+    <style name="NightTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#00796B</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:windowBackground">@color/background_material_dark</item>
+        <item name="colorAccent">#00796B</item>
+        <item name="tiltestyle">@style/NightTitleStyle</item>
+        <item name="contentStyle">@style/DarkTextContentStyle</item>
+        <item name="colorControlNormal">#212121</item>
+        <item name="android:textColor">#ffffff</item>
+
+    </style>
+
+    <style name="NightTitleStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/sw_20sp</item>
+    </style>
+    <style name="NightTextContentStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/sw_16sp</item>
+    </style>
+    <style name="DarkTitleStyle">
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">@dimen/sw_20sp</item>
+    </style>
+    <style name="DarkTextContentStyle">
+        <item name="android:textColor">#212121</item>
+        <item name="android:textSize">@dimen/sw_16sp</item>
+    </style>
 </resources>

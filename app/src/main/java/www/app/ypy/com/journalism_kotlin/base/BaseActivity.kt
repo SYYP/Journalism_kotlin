@@ -30,7 +30,7 @@ import java.util.*
         abstract fun intiLayout(): Int
 
         override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
+            super.onCreate(null)
             setContentView(intiLayout())
 //            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //                //透明状态栏
