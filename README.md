@@ -9,6 +9,7 @@ kotlin项目
  3：星座模块： 该模块主要可以查个星座的当日运势。当前部分效果值得一阅
  4：我的模块： 该模块主要介绍了作者本人的项目地址
  5：还有侧滑部分：目前还在研发中..
+ ![以下是项目中一些截图](https://github.com/SYYP/Journalism_kotlin/blob/master/app/src/main/java/www/app/ypy/com/journalism_kotlin/base/image/20191120164202.png)
 ![以下是项目中一些截图](https://github.com/SYYP/Journalism_kotlin/blob/master/app/src/main/java/www/app/ypy/com/journalism_kotlin/base/image/20191119145011.jpg)
 ![以下是项目中一些截图](https://github.com/SYYP/Journalism_kotlin/blob/master/app/src/main/java/www/app/ypy/com/journalism_kotlin/base/image/20191108102545.jpg)
 ![以下是项目中一些截图](https://github.com/SYYP/Journalism_kotlin/blob/master/app/src/main/java/www/app/ypy/com/journalism_kotlin/base/image/20191119145332.jpg)
