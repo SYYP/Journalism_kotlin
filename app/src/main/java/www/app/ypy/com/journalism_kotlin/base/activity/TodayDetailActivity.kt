@@ -33,6 +33,7 @@ class TodayDetailActivity : BaseActivity() {
             finish()
         }
 
+
     }
 
     override fun intiLayout(): Int {

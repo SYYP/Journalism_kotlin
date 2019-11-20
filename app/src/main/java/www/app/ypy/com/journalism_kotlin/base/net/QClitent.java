@@ -1,9 +1,7 @@
 package www.app.ypy.com.journalism_kotlin.base.net;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -11,15 +9,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import www.app.ypy.com.journalism_kotlin.BuildConfig;
 
 public class QClitent {
-
     private static QClitent mQClient;
-
     private OkHttpClient.Builder mBuilder;
-
     private QClitent() {
         initSetting();
     }
-
     public static QClitent getInstance() {
         if (mQClient == null) {
             synchronized (QClitent.class) {
@@ -55,7 +49,6 @@ public class QClitent {
     }
 
     private void initSetting() {
-
         //初始化OkHttp
         mBuilder = new OkHttpClient.Builder()
                 .connectTimeout(9, TimeUnit.SECONDS)    //设置连接超时 9s
